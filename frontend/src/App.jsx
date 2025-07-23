@@ -69,9 +69,9 @@ const App = () => {
     if (formData.segundo_apellido && !soloLetras.test(formData.segundo_apellido))
       errores.segundo_apellido = 'El segundo apellido solo puede contener letras y espacios';
     if (!soloNumeros.test(formData.telefono))
-      errores.telefono = 'El teléfono solo puede contener numeros';
+      errores.telefono = 'El telefono solo puede contener numeros';
     if (!emailValido.test(formData.email))
-      errores.email = 'El correo electrónico no es valido';
+      errores.email = 'El correo electronico no es valido';
     if (!edadValida(formData.fecha_nacimiento, formData.tipo_identificacion))
       errores.fecha_nacimiento = 'La fecha de nacimiento no es valida para este tipo de identificacion';
 
@@ -179,7 +179,7 @@ const App = () => {
         <h2>{isUpdating ? 'Actualizar Cliente' : 'Registrar Cliente'}</h2>
         <form onSubmit={handleSubmit} encType="multipart/form-data">
           <div>
-            <label>Identificación:</label>
+            <label>Identificacion:</label>
             <input type="text" name="identificacion" value={formData.identificacion} onChange={handleChange} />
             {mostrarError('identificacion')}
           </div>
@@ -190,7 +190,7 @@ const App = () => {
               <option value="">Seleccione</option>
               <option value="RC">RC - Registro Civil</option>
               <option value="TI">TI - Tarjeta de Identidad</option>
-              <option value="CC">CC - Cédula de Ciudadanía</option>
+              <option value="CC">CC - Cédula de Ciudadania</option>
             </select>
             {mostrarError('tipo_identificacion')}
           </div>
